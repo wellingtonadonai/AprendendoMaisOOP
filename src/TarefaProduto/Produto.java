@@ -1,9 +1,18 @@
 package TarefaProduto;
 
 public class Produto {
+
     public String name;
     public double preco;
     public int quantidade;
+
+    public Produto(String name, double preco, int quantidade){
+        this.name = name;
+        this.preco = preco;
+        this.quantidade = quantidade;
+
+    }
+
 
     public double totalValorEstoque(){
         return preco * quantidade;
