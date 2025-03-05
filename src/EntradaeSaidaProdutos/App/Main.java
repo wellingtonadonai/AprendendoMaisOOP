@@ -1,4 +1,6 @@
-package TarefaProduto;
+package EntradaeSaidaProdutos.App;
+
+import EntradaeSaidaProdutos.Produto;
 
 import java.util.Locale;
 import java.util.Scanner;
@@ -9,6 +11,8 @@ public class Main {
         Locale.setDefault(Locale.US);
         Scanner sc = new Scanner(System.in);
 
+        Produto p = new Produto();
+
 
 
         System.out.println("Entrada de Produto");
@@ -16,10 +20,9 @@ public class Main {
         String name = sc.nextLine();
         System.out.println("Preço: ");
         double preco = sc.nextDouble();
-        System.out.println("Quntidade no estoque: ");
-        int quantidade = sc.nextInt();
 
-        Produto produto = new Produto(name, preco, quantidade);
+
+        Produto produto = new Produto(name, preco);
 
 
         System.out.println("produto adicionado: "+ produto);
@@ -27,7 +30,7 @@ public class Main {
 
         System.out.println();
         System.out.println("Entre com a quantidade de produto a ser colocado no estoque:");
-        quantidade = sc.nextInt();
+        int quantidade = sc.nextInt();
         produto.addProdutos(quantidade);
 
         System.out.println("produto atualizado: "+ produto);
